@@ -160,9 +160,11 @@
     .promo-left,.promo-left.show{left:14px;right:auto}
     .promo-right,.promo-right.show{right:14px;left:auto}
     .promo .win .bd{flex-direction:column;text-align:center}
-    .promo .tb span.x{display:none}
     .promo .win{animation:railflash 4s infinite}
+    .promo.gone,.promo.gone.show{display:none}
+    .promo.respawn{animation:pop .3s ease-out}
   }
+  .promo.top{bottom:auto;top:70px}
   @keyframes railflash{
     0%,76%,100%{transform:none;filter:none;box-shadow:6px 6px 0 #000}
     80%,90%{transform:scale(1.05);filter:brightness(1.25) saturate(1.5);box-shadow:6px 6px 0 #000,0 0 0 4px var(--y),0 0 26px 6px var(--y)}
@@ -489,21 +491,49 @@ ym(114349333,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",
 document.querySelectorAll('.win .btn95:not(.def)').forEach(function(b){
   b.addEventListener('click', function(){ alert('Ошибка 404: терпение не найдено.\n\nЛучше порекомендуйте Глеба этому конкуренту.'); });
 });
-// promo popups on small screens: every 10s, alternating, 2 times each; pants once more at page end
+// promo blocks: on wide screens side rails (x closes; the left one stays closed, the right one comes back elsewhere);
+// on small screens timed popups every 10s, 2 times each; pants once more at page end
 (function(){
   var mq=window.matchMedia('(min-width:1360px)');
   var pants=document.getElementById('pants'), diag=document.getElementById('diagnoz');
   if(!pants||!diag) return;
-  var seq=[pants,diag,pants,diag], i=0, endShown=false;
+  var seq=[pants,diag,pants,diag], i=0, endShown=false, spawns=0, lastSlot=-1;
   function hideAll(){ pants.classList.remove('show'); diag.classList.remove('show'); }
+  function placePants(){
+    if(mq.matches){
+      // wide: random spot in the side gutters, never on top of the open left block
+      var leftOpen=!diag.classList.contains('gone');
+      var slots=[{s:'right',t:120},{s:'right',t:330},{s:'right',t:540},{s:'left',t:400},{s:'left',t:580}];
+      if(!leftOpen) slots.push({s:'left',t:120},{s:'left',t:330});
+      var pick, tries=0;
+      do{ pick=Math.floor(Math.random()*slots.length); tries++; }while(pick===lastSlot&&tries<10);
+      lastSlot=pick; var sl=slots[pick];
+      var maxTop=Math.max(80,window.innerHeight-300);
+      pants.style.top=Math.min(sl.t,maxTop)+'px';
+      pants.style.left=sl.s==='left'?'14px':'auto';
+      pants.style.right=sl.s==='right'?'14px':'auto';
+      pants.classList.remove('gone'); pants.classList.add('respawn');
+    } else {
+      pants.classList.toggle('top');
+      hideAll(); pants.classList.add('show');
+    }
+  }
+  function closeIt(e){
+    if(e===pants){
+      e.classList.remove('show'); e.classList.add('gone');
+      spawns++;
+      setTimeout(placePants, mq.matches ? 3500 : 15000);
+    } else if(mq.matches){ e.classList.add('gone'); }
+    else { e.classList.remove('show'); }
+  }
   [pants,diag].forEach(function(e){
     var x=e.querySelector('.x');
     if(x){
       x.setAttribute('role','button'); x.setAttribute('tabindex','0'); x.setAttribute('aria-label','Закрыть');
-      x.addEventListener('click',function(){ e.classList.remove('show'); });
-      x.addEventListener('keydown',function(ev){ if(ev.key==='Enter'||ev.key===' '){ ev.preventDefault(); e.classList.remove('show'); } });
+      x.addEventListener('click',function(){ closeIt(e); });
+      x.addEventListener('keydown',function(ev){ if(ev.key==='Enter'||ev.key===' '){ ev.preventDefault(); closeIt(e); } });
     }
-    e.addEventListener('click',function(ev){ if(ev.target.closest('a')) e.classList.remove('show'); });
+    e.addEventListener('click',function(ev){ if(!mq.matches && ev.target.closest('a')) e.classList.remove('show'); });
   });
   function next(){
     if(i>=seq.length) return;

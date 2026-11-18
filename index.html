@@ -8,6 +8,9 @@
 <meta property="og:title" content="ГлебанКРОТство — Лучше звоните Глебу!">
 <meta property="og:description" content="Хотите захватить рынок иначе? Наймите Глеба. Потом порекомендуйте его конкуренту.">
 <meta property="og:image" content="https://xn--80abebk6adtkbtnmb.xn--p1ai/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:url" content="https://глебанкротство.рф/">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦫</text></svg>">
@@ -48,11 +51,13 @@
     color:var(--y);text-shadow:3px 3px 0 var(--r),6px 6px 0 #000;letter-spacing:1px}
   .hero h1 .krot{color:var(--r);text-shadow:3px 3px 0 var(--y),6px 6px 0 #000}
   .hero .sub{color:#fff;font-size:clamp(17px,3.6vw,24px);margin:6px 0 14px}
-  .poster{display:block;width:auto;height:auto;max-width:100%;max-height:min(78vh,640px);margin:0 auto;border:6px ridge var(--y);box-shadow:0 0 0 4px var(--r),0 0 40px #ffe50088}
+  .hero figure{margin:0}
+  .photo{display:block;width:100%;max-width:400px;height:auto;aspect-ratio:760/1018;object-fit:cover;margin:0 auto;border:6px ridge var(--y);box-shadow:0 0 0 4px var(--r),0 0 40px #ffe50088}
+  .photo-cap{max-width:400px;margin:12px auto 0;background:var(--gray);border:3px outset #fff;color:#000;font:12px/1.3 Tahoma,Verdana,sans-serif;padding:4px 8px;text-align:left}
   .callnow{display:inline-block;margin:18px auto 6px;background:var(--y);border:5px outset #fff36b;padding:10px 22px;
     font-family:Impact,"Arial Black",sans-serif;font-size:clamp(26px,6vw,44px);color:var(--r);text-decoration:none;text-shadow:2px 2px 0 #000;
     transform:rotate(-2deg);box-shadow:6px 6px 0 #000}
-  @media (max-width:780px){.hero{grid-template-columns:1fr;gap:18px}.poster{max-height:60vh}}
+  @media (max-width:780px){.hero{grid-template-columns:1fr;gap:18px}.photo,.photo-cap{max-width:320px}}
   .callnow:hover{border-style:inset;background:#fff;transform:rotate(2deg) scale(1.04)}
   .callnow small{display:block;font:bold 15px "Comic Sans MS",cursive;color:#000;text-shadow:none}
 
@@ -121,6 +126,9 @@
   .final .phone{display:inline-block;font:clamp(34px,8vw,64px) Impact,sans-serif;color:#fff;text-decoration:none;text-shadow:4px 4px 0 #000;margin:4px 0}
   .final .phone:hover{color:var(--y)}
   .final .mail{color:#fff;font-size:20px}
+  .callrow{display:grid;grid-template-columns:minmax(0,250px) minmax(0,1fr);gap:26px;align-items:center;margin-top:8px}
+  .callphoto{display:block;width:100%;height:auto;aspect-ratio:640/853;object-fit:cover;border:5px ridge var(--y);box-shadow:6px 6px 0 #000;transform:rotate(-2deg)}
+  @media (max-width:640px){.callrow{grid-template-columns:1fr;gap:16px}.callphoto{max-width:240px;margin:0 auto}}
 
   footer{text-align:center;color:#fff;font:13px Verdana,sans-serif;padding:20px 0 40px}
   .counter{display:inline-flex;gap:2px;background:#000;padding:3px;border:2px inset #888;margin:6px 0}
@@ -142,17 +150,25 @@
   .promo .win{box-shadow:6px 6px 0 #000}
   .promo .win .bd{align-items:center}
   .promo .tb span.x{width:28px;height:24px;line-height:18px;font-size:16px;cursor:pointer}
+  .promo .ava{display:block;width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px ridge var(--y)}
   .promo .pnote{margin:0;padding:0 12px 10px;font:11px/1.3 Tahoma,Verdana,sans-serif;color:#222;text-align:center}
   @media (min-width:1360px){
     .wrap{max-width:900px}
     .hero{grid-template-columns:minmax(0,1fr) minmax(0,340px)}
-    .hero h1{font-size:58px}
+    .hero h1{font-size:48px}
     .promo,.promo.show{display:block;position:fixed;top:120px;bottom:auto;margin:0;width:calc((100vw - 900px)/2 - 30px);max-width:250px;animation:none;z-index:40}
     .promo-left,.promo-left.show{left:14px;right:auto}
     .promo-right,.promo-right.show{right:14px;left:auto}
     .promo .win .bd{flex-direction:column;text-align:center}
     .promo .tb span.x{display:none}
+    .promo .win{animation:railflash 4s infinite}
   }
+  @keyframes railflash{
+    0%,76%,100%{transform:none;filter:none;box-shadow:6px 6px 0 #000}
+    80%,90%{transform:scale(1.05);filter:brightness(1.25) saturate(1.5);box-shadow:6px 6px 0 #000,0 0 0 4px var(--y),0 0 26px 6px var(--y)}
+    85%{transform:none;filter:none;box-shadow:6px 6px 0 #000}
+  }
+  @media (prefers-reduced-motion:reduce){.promo .win{animation:none}}
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -174,12 +190,14 @@ ym(114349333,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",
   <!-- HERO -->
   <header class="hero">
     <div class="hero-text">
-    <div class="sub">★ ★ ★ <span class="blink">ВНИМАНИЕ!</span> ★ ★ ★</div>
     <h1>ГЛЕБАН<span class="krot">КРОТ</span>СТВО</h1>
     <div class="sub">Копаем глубоко. Под ваших конкурентов. 🦫⛏️</div>
     <a class="callnow" href="tel:+79516823680">☎ 8-951-682-36-80<small>звоните прямо сейчас! операторы — это тоже Глеб</small></a>
     </div>
-    <img class="poster" src="img/poster.jpg" width="900" height="1341" alt="Постер: Лучше звоните Глебу! Программа ГлебанКРОТство">
+    <figure>
+      <img class="photo" src="img/gleb-hero.jpg" width="760" height="1018" alt="Глеб в гарнитуре с кружкой «Лучше звоните Глебу!» в кабинете, заваленном папками">
+      <figcaption class="photo-cap">Глеб.jpg: на фото кружка, гарнитура и полная готовность к звонку</figcaption>
+    </figure>
   </header>
 
   <!-- PAINS -->
@@ -348,10 +366,15 @@ ym(114349333,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",
   <!-- FINAL CTA -->
   <section class="panel final" id="call">
     <h2>ЛУЧШЕ ЗВОНИТЕ ГЛЕБУ!</h2>
-    <p style="font-size:20px">Хотите захватить рынок иначе? <span class="blink">Не ждите, пока конкурент позвонит первым.</span></p>
-    <a class="phone" href="tel:+79516823680">8-951-682-36-80</a><br>
-    <a class="mail" href="mailto:glebotan@gmail.com">✉ glebotan@gmail.com</a>
-    <p class="small" style="margin-top:14px">Санкт-Петербург · удалённо / гибрид · отвечаю быстрее, чем грузится эта страница</p>
+    <div class="callrow">
+      <img class="callphoto" src="img/gleb-call.jpg" width="640" height="853" loading="lazy" alt="Глеб разговаривает по телефону">
+      <div class="calltext">
+        <p style="font-size:20px">Хотите захватить рынок иначе? <span class="blink">Не ждите, пока конкурент позвонит первым.</span></p>
+        <a class="phone" href="tel:+79516823680">8-951-682-36-80</a><br>
+        <a class="mail" href="mailto:glebotan@gmail.com">✉ glebotan@gmail.com</a>
+        <p class="small" style="margin-top:14px">Санкт-Петербург · удалённо / гибрид · отвечаю быстрее, чем грузится эта страница</p>
+      </div>
+    </div>
   </section>
 
 </div>
@@ -360,7 +383,7 @@ ym(114349333,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",
   <div class="win">
     <div class="tb">Доктор Глеб <span class="x">×</span></div>
     <div class="bd">
-      <div class="ico">🩺</div>
+      <div class="ico"><img class="ava" src="img/gleb-avatar.jpg" width="72" height="72" alt="Доктор Глеб"></div>
       <div>
         <p><b>Диагноз вашей компании</b></p>
         <p>Пришлите Глебу в Telegram ИНН или ссылку на сайт компании (своей, начальника или конкурента). Получите шуточный Индекс ГлебанКРОТства, главную болезнь и рецепт.</p>

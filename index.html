@@ -416,12 +416,12 @@
 document.querySelectorAll('.win .btn95:not(.def)').forEach(function(b){
   b.addEventListener('click', function(){ alert('Ошибка 404: терпение не найдено.\n\nЛучше звоните Глебу: 8-951-682-36-80'); });
 });
-// promo popups on small screens: every 10s, alternating, 3 times each
+// promo popups on small screens: every 10s, alternating, 2 times each; pants once more at page end
 (function(){
   var mq=window.matchMedia('(min-width:1360px)');
   var pants=document.getElementById('pants'), diag=document.getElementById('diagnoz');
   if(!pants||!diag) return;
-  var seq=[pants,diag,pants,diag,pants,diag], i=0;
+  var seq=[pants,diag,pants,diag], i=0, endShown=false;
   function hideAll(){ pants.classList.remove('show'); diag.classList.remove('show'); }
   [pants,diag].forEach(function(e){
     var x=e.querySelector('.x');
@@ -439,6 +439,13 @@ document.querySelectorAll('.win .btn95:not(.def)').forEach(function(b){
     setTimeout(next,10000);
   }
   setTimeout(next,10000);
+  window.addEventListener('scroll',function(){
+    if(endShown||mq.matches) return;
+    var h=document.documentElement;
+    if(window.innerHeight+window.scrollY>=h.scrollHeight-40){
+      endShown=true; hideAll(); pants.classList.add('show');
+    }
+  },{passive:true});
 })();
 </script>
 </body>

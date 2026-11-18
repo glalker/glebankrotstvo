@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ГлебанКРОТство — Лучше звоните Глебу!</title>
+<meta name="description" content="Глеб Керейтов — Senior Sales Ops / GTM Engineer / AI & CRM Architect. 20+ лет в продажах, x4 выручка, AI-агенты в проде. Последние 2 компании — банкроты. Совпадение? Не думаю!">
+<meta property="og:title" content="ГлебанКРОТство — Лучше звоните Глебу!">
+<meta property="og:description" content="Хотите захватить рынок иначе? Наймите Глеба. Потом порекомендуйте его конкуренту.">
+<meta property="og:image" content="https://xn--80abebk6adtkbtnmb.xn--p1ai/img/og.jpg">
+<meta property="og:url" content="https://глебанкротство.рф/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦫</text></svg>">
+<style>
+  :root{--y:#ffe500;--r:#e3001b;--b:#0000ee;--g:#00ff00;--gray:#c0c0c0;--navy:#000080}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;color:#000;font-family:"Comic Sans MS","Comic Sans",Chalkboard,"Comic Neue",cursive;
+    background-color:#1a0b3d;
+    background-image:
+      radial-gradient(#fff 1px,transparent 1.5px),
+      radial-gradient(#ffe500 1px,transparent 1.5px);
+    background-size:60px 60px,90px 90px;background-position:0 0,30px 45px;
+    cursor:crosshair;overflow-x:hidden;
+  }
+  a{color:var(--b)} a:visited{color:#551a8b}
+  .wrap{max-width:860px;margin:0 auto;padding:0 12px}
+  .blink{animation:blink 1s steps(1) infinite}
+  @keyframes blink{50%{visibility:hidden}}
+  .rainbow{background:linear-gradient(90deg,red,orange,yellow,lime,cyan,blue,violet,red);background-size:200% auto;
+    -webkit-background-clip:text;background-clip:text;color:transparent;animation:rb 3s linear infinite}
+  @keyframes rb{to{background-position:200% center}}
+  .shake{display:inline-block;animation:shake .4s infinite}
+  @keyframes shake{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+  .spin{display:inline-block;animation:spin 3s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* top bar */
+  .topbar{background:var(--navy);color:#fff;font:bold 13px Tahoma,Verdana,sans-serif;padding:4px 8px;border-bottom:2px solid #fff}
+  .topbar marquee{display:block}
+  .construction{height:22px;background:repeating-linear-gradient(45deg,#000 0 18px,var(--y) 18px 36px);border-top:2px solid #000;border-bottom:2px solid #000}
+
+  /* hero */
+  .hero{text-align:center;padding:18px 0 6px}
+  .hero h1{font-family:Impact,"Arial Black",sans-serif;font-size:clamp(38px,9vw,84px);line-height:.95;margin:6px 0;
+    color:var(--y);text-shadow:3px 3px 0 var(--r),6px 6px 0 #000;letter-spacing:1px}
+  .hero h1 .krot{color:var(--r);text-shadow:3px 3px 0 var(--y),6px 6px 0 #000}
+  .hero .sub{color:#fff;font-size:clamp(17px,3.6vw,24px);margin:6px 0 14px}
+  .poster{display:block;width:100%;max-width:560px;margin:0 auto;border:6px ridge var(--y);box-shadow:0 0 0 4px var(--r),0 0 40px #ffe50088}
+  .callnow{display:inline-block;margin:18px auto 6px;background:var(--y);border:5px outset #fff36b;padding:10px 22px;
+    font-family:Impact,"Arial Black",sans-serif;font-size:clamp(26px,6vw,44px);color:var(--r);text-decoration:none;text-shadow:2px 2px 0 #000;
+    transform:rotate(-2deg);box-shadow:6px 6px 0 #000}
+  .callnow:hover{border-style:inset;background:#fff;transform:rotate(2deg) scale(1.04)}
+  .callnow small{display:block;font:bold 15px "Comic Sans MS",cursive;color:#000;text-shadow:none}
+
+  /* panels */
+  .panel{background:#fff;border:4px ridge var(--gray);margin:26px 0;padding:16px 18px;box-shadow:8px 8px 0 #000}
+  .panel h2{font-family:Impact,"Arial Black",sans-serif;font-weight:normal;font-size:clamp(26px,5vw,38px);margin:0 0 10px;color:var(--r);text-shadow:2px 2px 0 var(--y)}
+  .panel.yellow{background:var(--y)}
+  .panel.black{background:#000;color:var(--g);font-family:"Courier New",monospace;border-color:#444}
+  .panel.black h2{color:var(--g);text-shadow:none;font-family:"Courier New",monospace;font-weight:bold}
+  hr.rainbowline{border:0;height:8px;margin:24px 0;background:linear-gradient(90deg,red,orange,yellow,lime,cyan,blue,violet)}
+
+  /* win95 dialogs */
+  .dialogs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+  .win{background:var(--gray);border:2px solid;border-color:#fff #404040 #404040 #fff;box-shadow:1px 1px 0 #000;font:13px Tahoma,"MS Sans Serif",Verdana,sans-serif}
+  .win:nth-child(odd){transform:rotate(-1deg)} .win:nth-child(even){transform:rotate(1.2deg)}
+  .win .tb{background:linear-gradient(90deg,var(--navy),#1084d0);color:#fff;font-weight:bold;padding:3px 4px 3px 6px;display:flex;justify-content:space-between;align-items:center}
+  .win .tb span.x{background:var(--gray);color:#000;border:2px solid;border-color:#fff #404040 #404040 #fff;width:18px;height:16px;line-height:11px;text-align:center;font-size:12px}
+  .win .bd{padding:12px;display:flex;gap:12px;align-items:flex-start}
+  .win .ico{font-size:34px;line-height:1}
+  .win p{margin:0 0 6px}
+  .win .btns{display:flex;gap:8px;justify-content:center;padding:0 12px 12px}
+  .btn95{background:var(--gray);border:2px solid;border-color:#fff #404040 #404040 #fff;padding:4px 12px;font:13px Tahoma,sans-serif;color:#000;text-decoration:none;cursor:pointer}
+  .btn95:active{border-color:#404040 #fff #fff #404040}
+  .btn95.def{outline:1px dotted #000;outline-offset:-5px;font-weight:bold}
+
+  /* steps */
+  .steps{counter-reset:s;list-style:none;padding:0;margin:0}
+  .steps li{counter-increment:s;position:relative;padding:10px 10px 10px 64px;margin:10px 0;background:#fff;border:3px dashed var(--r);font-size:17px}
+  .steps li::before{content:counter(s);position:absolute;left:10px;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;
+    background:var(--r);color:var(--y);font:bold 26px Impact,sans-serif;display:flex;align-items:center;justify-content:center;border:3px solid #000}
+
+  /* stats table */
+  table.stats{width:100%;border-collapse:separate;border-spacing:4px;border:3px outset var(--gray);background:var(--gray);font-size:16px}
+  table.stats td,table.stats th{border:2px inset var(--gray);background:#fff;padding:8px 10px;text-align:left;vertical-align:top}
+  table.stats th{background:var(--navy);color:#fff;font-family:Tahoma,sans-serif}
+  table.stats td.big{font:bold 28px Impact,sans-serif;color:var(--r);text-align:center;width:1%;min-width:120px;line-height:1.1}
+  @media (max-width:520px){table.stats{font-size:14px;border-spacing:2px}table.stats td,table.stats th{padding:6px}table.stats td.big{font-size:20px;min-width:80px}.panel{padding:12px;box-shadow:5px 5px 0 #000}}
+
+  /* pricing */
+  .tariffs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .tariff{background:#fff;border:4px double #000;padding:14px;text-align:center;position:relative}
+  .tariff h3{margin:0 0 6px;font:24px Impact,sans-serif;color:var(--navy)}
+  .tariff .price{font:bold 20px "Times New Roman",serif;color:var(--r);margin:6px 0 10px}
+  .tariff ul{text-align:left;padding-left:20px;margin:0 0 12px;font-size:15px}
+  .tariff.hot{background:#fffbd0;border-color:var(--r);transform:scale(1.03)}
+  .tariff .badge{position:absolute;top:-16px;right:-10px;background:var(--r);color:var(--y);font:bold 14px Tahoma,sans-serif;padding:4px 8px;transform:rotate(8deg);border:2px solid #000}
+
+  /* cv */
+  .cv h3{font-family:"Times New Roman",serif;font-size:21px;margin:18px 0 2px;color:var(--navy)}
+  .cv .meta{font-size:14px;color:#555;margin-bottom:6px}
+  .cv ul{margin:6px 0;padding-left:22px}
+  .cv li{margin:4px 0;font-family:Verdana,Geneva,sans-serif;font-size:14px;line-height:1.45}
+  .buttons88{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+  .b88{width:88px;height:31px;display:flex;align-items:center;justify-content:center;text-align:center;font:bold 10px/1.05 Verdana,sans-serif;
+    border:2px outset #ddd;color:#fff;text-transform:uppercase;letter-spacing:.3px}
+
+  /* guestbook faq */
+  .gb{border:2px solid var(--navy);margin:12px 0;background:#f4f4ff}
+  .gb .q{background:var(--navy);color:#fff;padding:6px 10px;font:bold 14px Verdana,sans-serif}
+  .gb .q em{color:var(--y);font-style:normal}
+  .gb .a{padding:10px;font-family:"Times New Roman",serif;font-size:17px}
+
+  /* final cta */
+  .final{text-align:center;background:var(--r);color:var(--y);border:6px ridge var(--y)}
+  .final h2{color:var(--y);text-shadow:3px 3px 0 #000;font-size:clamp(30px,7vw,56px)}
+  .final .phone{display:inline-block;font:clamp(34px,8vw,64px) Impact,sans-serif;color:#fff;text-decoration:none;text-shadow:4px 4px 0 #000;margin:4px 0}
+  .final .phone:hover{color:var(--y)}
+  .final .mail{color:#fff;font-size:20px}
+
+  footer{text-align:center;color:#fff;font:13px Verdana,sans-serif;padding:20px 0 40px}
+  .counter{display:inline-flex;gap:2px;background:#000;padding:3px;border:2px inset #888;margin:6px 0}
+  .counter span{background:#111;color:#0f0;font:bold 20px "Courier New",monospace;padding:0 4px;border:1px solid #333}
+  .webring{margin:12px auto;display:inline-block;border:2px outset var(--gray);background:var(--gray);color:#000;padding:6px 10px}
+  .webring a{color:var(--navy);font-weight:bold}
+  .small{font-size:12px;opacity:.85}
+
+  .sparkle{position:fixed;pointer-events:none;z-index:9999;font-size:14px;animation:fall 1s linear forwards}
+  @keyframes fall{to{transform:translateY(40px) scale(.2);opacity:0}}
+  .sticky-call{position:fixed;right:10px;bottom:10px;z-index:50;background:var(--y);border:3px outset #fff36b;padding:8px 12px;
+    font:bold 16px Impact,sans-serif;color:var(--r);text-decoration:none;box-shadow:3px 3px 0 #000}
+  @media (prefers-reduced-motion:reduce){.blink,.rainbow,.shake,.spin{animation:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <marquee scrollamount="6">★ ДОБРО ПОЖАЛОВАТЬ НА ОФИЦИАЛЬНУЮ СТРАНИЦУ ПРОГРАММЫ «ГЛЕБАНКРОТСТВО» ★ КОПАЕМ ГЛУБОКО С 2007 ГОДА ★ ЛУЧШЕ ЗВОНИТЕ ГЛЕБУ! ★ 8-951-682-36-80 ★ ОСТОРОЖНО: САЙТ ОПТИМИЗИРОВАН ПОД INTERNET EXPLORER 4.0 И РАЗРЕШЕНИЕ 800×600 ★</marquee>
+</div>
+<div class="construction"></div>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="sub">★ ★ ★ <span class="blink">ВНИМАНИЕ!</span> ★ ★ ★</div>
+    <h1>ГЛЕБАН<span class="krot">КРОТ</span>СТВО</h1>
+    <div class="sub">Копаем глубоко. Под ваших конкурентов. 🦫⛏️</div>
+    <img class="poster" src="img/poster.jpg" width="900" height="1341" alt="Постер: Лучше звоните Глебу! Программа ГлебанКРОТство">
+    <a class="callnow" href="tel:+79516823680">☎ 8-951-682-36-80<small>звоните прямо сейчас! операторы — это тоже Глеб</small></a>
+  </header>
+
+  <!-- PAINS -->
+  <section class="panel" id="boli">
+    <h2>У вас тоже <span class="shake">ЭТО?</span></h2>
+    <p>Если хоть одно окно ниже вам знакомо — у вашего бизнеса <b>критическая ошибка</b>. Перезагрузка не поможет.</p>
+    <div class="dialogs">
+      <div class="win">
+        <div class="tb">Рынок.exe <span class="x">×</span></div>
+        <div class="bd"><div class="ico">⛔</div><div><p><b>Конкурент отжимает долю рынка.</b></p><p>Вы демпингуете, он демпингует сильнее. Все в минусе, но он почему-то ещё жив.</p></div></div>
+        <div class="btns"><span class="btn95">Терпеть</span><a class="btn95 def" href="#programma">Звонить Глебу</a></div>
+      </div>
+      <div class="win">
+        <div class="tb">Отдел_продаж.doc <span class="x">×</span></div>
+        <div class="bd"><div class="ico">⚠️</div><div><p><b>Продажи держатся на двух звёздах.</b></p><p>Уйдёт один — уйдёт пол-выручки. Регламентов нет, онбординга нет, план «как пойдёт».</p></div></div>
+        <div class="btns"><span class="btn95">Молиться</span><a class="btn95 def" href="#programma">Звонить Глебу</a></div>
+      </div>
+      <div class="win">
+        <div class="tb">Bitrix24 — кладбище <span class="x">×</span></div>
+        <div class="bd"><div class="ico">💀</div><div><p><b>CRM есть. Пользы нет.</b></p><p>Сделки висят месяцами, роботы спят, руководитель смотрит отчёты в Excel.</p></div></div>
+        <div class="btns"><span class="btn95">Ещё полгода</span><a class="btn95 def" href="#programma">Звонить Глебу</a></div>
+      </div>
+      <div class="win">
+        <div class="tb">AI_стратегия_2026.ppt <span class="x">×</span></div>
+        <div class="bd"><div class="ico">🤖</div><div><p><b>«Внедряем ИИ» уже год.</b></p><p>Есть презентация и подписка на ChatGPT. Нет ни одного агента в проде и ни рубля эффекта.</p></div></div>
+        <div class="btns"><span class="btn95">Ещё пилот</span><a class="btn95 def" href="#programma">Звонить Глебу</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM -->
+  <section class="panel yellow" id="programma">
+    <h2>★ Программа «ГлебанКРОТство» ★</h2>
+    <p style="font-size:18px"><b>Последние 2 компании, где я был C-level 4+ года, — БАНКРОТЫ.</b><br>
+    <span class="rainbow" style="font-size:24px;font-weight:bold">Совпадение? Не думаю!</span></p>
+    <p>Поэтому у меня для вас уникальное предложение, аналогов которому нет ни на hh.ru, ни на Авито:</p>
+    <ol class="steps">
+      <li><b>Вы нанимаете Глеба.</b> Глеб пересобирает вам продажи, CRM и AI-автоматизацию. Выручка растёт (в прошлый раз — в 4 раза).</li>
+      <li><b>Вы захватываете рынок.</b> Конкуренты нервно курят ваш кейс на vc.ru.</li>
+      <li><b>Когда рынок кончится —</b> вы рекомендуете Глеба главному конкуренту. С горячими отзывами. 😏</li>
+      <li><b>Конкурент нанимает Глеба.</b> Дальше вы знаете. 🦫⛏️</li>
+      <li><b>Повторить.</b> Кусок за кусочком. Рынок — ваш.</li>
+    </ol>
+    <p class="small" style="margin-top:12px">* Механизм «шага 4» наукой не изучен. Юридически это совпадение. Морально — тоже.</p>
+  </section>
+
+  <!-- PROOF -->
+  <section class="panel" id="cifry">
+    <h2>Цифры, а не «я командный игрок»</h2>
+    <table class="stats">
+      <tr><th colspan="2">ПРОТОКОЛ РАСКОПОК (подтверждается резюме)</th></tr>
+      <tr><td class="big">×4</td><td><b>Выручка компании</b> за время руководства продажами в EdTech. Учеников — ×5.</td></tr>
+      <tr><td class="big">5→20</td><td><b>Отдел продаж</b> вырос с 5 до ~20 человек; трёхзвенка «хантеры → клозеры → сервис».</td></tr>
+      <tr><td class="big">4 дня →<br>2 мин</td><td><b>Скоринг заявок</b> ИИ-агентом, обученным на 20 годах ТКП. Агент в проде, продукт в реестре ПО Минцифры.</td></tr>
+      <tr><td class="big">20+</td><td><b>Лет в продажах</b>: B2B, B2C, корпоративные клиенты, EdTech, наукоёмкое производство, банк.</td></tr>
+      <tr><td class="big">0</td><td><b>Лишних систем</b>: план/факт по проектам — прямо в Битрикс24, без зоопарка.</td></tr>
+    </table>
+  </section>
+
+  <hr class="rainbowline">
+
+  <!-- TARIFFS -->
+  <section class="panel" id="tarify">
+    <h2>Тарифы <span class="spin">💿</span></h2>
+    <div class="tariffs">
+      <div class="tariff">
+        <h3>🦫 Крот-разведчик</h3>
+        <div class="price">проект / консалтинг</div>
+        <ul>
+          <li>Аудит отдела продаж и CRM</li>
+          <li>Карта потерь денег по воронке</li>
+          <li>План внедрения с расчётом ROI</li>
+        </ul>
+        <a class="btn95" href="tel:+79516823680">Заказать разведку</a>
+      </div>
+      <div class="tariff hot">
+        <div class="badge blink">ХИТ!</div>
+        <h3>⛏️ Крот-резидент</h3>
+        <div class="price">full-time · СПб / удалённо / гибрид</div>
+        <ul>
+          <li>Senior Sales Ops / Head of Sales Ops</li>
+          <li>GTM Engineer: n8n + Claude + Clay + Apify</li>
+          <li>Директор по развитию / продажам</li>
+          <li>Битрикс24: архитектура руками</li>
+        </ul>
+        <a class="btn95 def" href="tel:+79516823680">Нанять крота</a>
+      </div>
+      <div class="tariff">
+        <h3>🕶️ Крот в тылу врага</h3>
+        <div class="price">цена по запросу. конфиденциально</div>
+        <ul>
+          <li>Вы рекомендуете меня конкуренту</li>
+          <li>Я честно делаю там свою работу</li>
+          <li>Дальше — «совпадение»</li>
+        </ul>
+        <a class="btn95" href="mailto:glebotan@gmail.com?subject=%D0%9A%D1%80%D0%BE%D1%82%20%D0%B2%20%D1%82%D1%8B%D0%BB%D1%83%20%D0%B2%D1%80%D0%B0%D0%B3%D0%B0">Шёпотом на почту</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERIOUS CV -->
+  <section class="panel cv" id="cv">
+    <h2>А если серьёзно: кого вы нанимаете</h2>
+    <p style="font-family:Verdana,sans-serif;font-size:15px;line-height:1.5"><b>Глеб Керейтов</b> — Senior Sales Operations Manager · GTM Engineer · AI &amp; CRM Architect. Санкт-Петербург, удалённо или гибрид.<br>
+    Соединяю уровень директора по развитию (стратегия, юнит-экономика, защита ROI перед собственником) с hands-on сборкой пайплайнов — и довожу до измеримых денег.</p>
+
+    <div class="buttons88">
+      <div class="b88" style="background:#ea4b71">n8n<br>powered</div>
+      <div class="b88" style="background:#d97757">Claude<br>Code</div>
+      <div class="b88" style="background:#2fc6f6">Битрикс24<br>руками</div>
+      <div class="b88" style="background:#3776ab">Python<br>inside</div>
+      <div class="b88" style="background:#000">Clay<br>enriched</div>
+      <div class="b88" style="background:#00a86b">Apify<br>scraped</div>
+      <div class="b88" style="background:#6b4eff">HeyReach<br>outreach</div>
+      <div class="b88" style="background:#808080">REST API<br>webhooks</div>
+    </div>
+
+    <h3>GTM Engineer / Архитектор AI-аутрича</h3>
+    <div class="meta">wow42.tech — международный EdTech-стартап · проектно</div>
+    <ul>
+      <li>Автоматизированный конвейер B2B/B2C-аутрича для поиска product-market fit.</li>
+      <li>Сквозные сценарии на n8n + Claude: сбор, фильтрация, AI-квалификация лидов, персонализированные касания.</li>
+      <li>Clay как поисковик без сжигания кредитов + дообогащение LinkedIn через Apify: полнее данные, меньше затрат.</li>
+      <li>Кампании в HeyReach с системным A/B-тестом сегментов, офферов и сценариев.</li>
+    </ul>
+
+    <h3>Бизнес-консультант → Директор по развитию</h3>
+    <div class="meta">Научно-промышленное предприятие · 2021 — 2026</div>
+    <ul>
+      <li>ИИ-агент в production на внутренних методичках и 20-летней истории ТКП: скоринг заявок <b>с 4 дней до 2 минут</b>. Продукт включён в реестр российского ПО.</li>
+      <li>Битрикс24 под ключ руками: архитектура данных, воронки, смарт-процессы, роботы, база знаний, план/факт по проектам.</li>
+      <li>Интеграции: IP-телефония, мессенджеры, СБИС (тендеры), ЭДО. Цикл «инициатива → оценка эффекта → прототип → обучение и метрики».</li>
+      <li>С нуля построил отдел проектных продаж, регламенты и мотивацию; статус МТК, дочернее научное ООО, патентное направление.</li>
+    </ul>
+
+    <h3>Руководитель отдела продаж → Директор по продажам</h3>
+    <div class="meta">Образовательный центр (EdTech, B2C+B2B) · 2018 — 2021</div>
+    <ul>
+      <li>Выручка <b>×4</b>, ученики <b>×5</b>, отдел продаж с 5 до ~20 человек.</li>
+      <li>Трёхзвенная модель «хантеры → клозеры → сервис» (апсейл, кросс-сейл, удержание), регламенты, онбординг.</li>
+      <li>Маркетинг, продажи и сервис в едином контуре Битрикс24; когортный анализ, CJM, контроль юнит-экономики.</li>
+    </ul>
+
+    <h3>Коммерческий и технический бэкграунд</h3>
+    <div class="meta">ВТБ24, Ассоциация «СПЭК», СПб ГУП «Пассажиравтотранс», медиа · 2007 — 2018</div>
+    <ul>
+      <li>Корпоративные B2B-продажи и крупные клиенты; плюс инженерия руками — ГЛОНАСС, видеорегистрация, системы оплаты проезда.</li>
+      <li>Образование: Яндекс Практикум × НИУ ВШЭ «Финансовый менеджер» (2023), колледж «Логист» (2025), СПбГУ.</li>
+    </ul>
+    <p style="text-align:center;margin-top:16px"><a class="btn95 def" href="kereytov-cv.pdf" download>📄 Скачать резюме (PDF, 200 КБ — грузится за 30 сек на модеме 56k)</a></p>
+  </section>
+
+  <!-- FAQ / guestbook -->
+  <section class="panel" id="faq">
+    <h2>📖 Гостевая книга (а на самом деле возражения)</h2>
+    <div class="gb"><div class="q">Вопрос от <em>HR_Marina_1998</em>: Так это вы их обанкротили?!</div>
+      <div class="a">Нет. Компании закрываются из-за рынка, собственников и макроэкономики. Я в это время растил выручку, строил отделы и запускал AI в прод — это в цифрах выше. А шутку про крота я придумал сам, потому что самоирония — тоже навык.</div></div>
+    <div class="gb"><div class="q">Вопрос от <em>CEO_ne_spit</em>: А вы вообще серьёзно ищете работу?</div>
+      <div class="a">Абсолютно. Ищу роль Senior Sales Ops / Head of Sales Ops / GTM Engineer / директора по развитию или продажам. Сайт смешной — опыт нет.</div></div>
+    <div class="gb"><div class="q">Вопрос от <em>Sobstvennik_777</em>: Зачем мне C-level, который сам пишет пайплайны?</div>
+      <div class="a">Затем, что между «давайте внедрим AI» и «агент сэкономил 4 дня на каждой заявке» обычно стоят три подрядчика и полгода. У меня — одна голова, n8n и Claude.</div></div>
+    <div class="gb"><div class="q">Вопрос от <em>Konkurent_X</em>: А если вас наймём МЫ?</div>
+      <div class="a">Добро пожаловать в программу. Звоните — обсудим, кто из нас кому конкурент. 🦫</div></div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="panel final" id="call">
+    <h2>ЛУЧШЕ ЗВОНИТЕ ГЛЕБУ!</h2>
+    <p style="font-size:20px">Хотите захватить рынок иначе? <span class="blink">Не ждите, пока конкурент позвонит первым.</span></p>
+    <a class="phone" href="tel:+79516823680">8-951-682-36-80</a><br>
+    <a class="mail" href="mailto:glebotan@gmail.com">✉ glebotan@gmail.com</a>
+    <p class="small" style="margin-top:14px">Санкт-Петербург · удалённо / гибрид · отвечаю быстрее, чем грузится эта страница</p>
+  </section>
+
+</div>
+
+<footer>
+  <div>Вы посетитель №</div>
+  <div class="counter" id="counter"></div>
+  <div><span class="blink">🚧</span> Сайт находится в стадии разработки с 1997 года <span class="blink">🚧</span></div>
+  <div class="webring">◄ <a href="#boli">пред.</a> | Веб-кольцо «Кроты Рунета» | <a href="#call">след.</a> ►</div>
+  <p class="small">Лучше всего смотреть в Netscape Navigator 3.0 · 800×600 · 256 цветов<br>
+  Сделано в Блокноте. Все банкротства — правда, причинно-следственная связь — нет. Сайт — самоирония.<br>
+  © 1997–2026 ГлебанКРОТство</p>
+</footer>
+
+<a class="sticky-call" href="tel:+79516823680">☎ Звонить Глебу</a>
+
+<script>
+// visitor counter (fake, the 90s way)
+(function(){
+  var base = 1337 + Math.floor((Date.now() - 1767225600000) / 3600000) * 3, n = base;
+  try { var v = +localStorage.getItem('gk_v') || 0; localStorage.setItem('gk_v', v + 1); n += v; } catch(e){}
+  var s = String(n).padStart(7, '0'), el = document.getElementById('counter');
+  for (var i = 0; i < s.length; i++) { var d = document.createElement('span'); d.textContent = s[i]; el.appendChild(d); }
+})();
+// cursor sparkles
+(function(){
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var chars = ['✦','★','✧','🦫','💰'], last = 0;
+  document.addEventListener('mousemove', function(e){
+    var t = Date.now(); if (t - last < 45) return; last = t;
+    var s = document.createElement('div'); s.className = 'sparkle';
+    s.textContent = chars[Math.floor(Math.random()*chars.length)];
+    s.style.left = e.clientX + 'px'; s.style.top = e.clientY + 'px';
+    s.style.color = ['#ffe500','#ff3b3b','#00ff00','#00ffff'][Math.floor(Math.random()*4)];
+    document.body.appendChild(s); setTimeout(function(){ s.remove(); }, 1000);
+  });
+})();
+// alert on first "Терпеть"-type buttons
+document.querySelectorAll('.win .btn95:not(.def)').forEach(function(b){
+  b.addEventListener('click', function(){ alert('Ошибка 404: терпение не найдено.\n\nЛучше звоните Глебу: 8-951-682-36-80'); });
+});
+</script>
+</body>
+</html>

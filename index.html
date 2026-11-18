@@ -169,6 +169,32 @@
     85%{transform:none;filter:none;box-shadow:6px 6px 0 #000}
   }
   @media (prefers-reduced-motion:reduce){.promo .win{animation:none}}
+
+  /* act 1 recommend + act 2 serious */
+  .callnow.rec{font-size:clamp(24px,5vw,38px)}
+  #boli .dialogs{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+  @media (max-width:420px){#boli .dialogs{grid-template-columns:1fr}}
+  .recmsg{background:#000;border:2px dashed var(--g);color:var(--g);padding:10px 12px;margin:12px 0;font:14px/1.5 "Courier New",monospace;text-align:left}
+  .recbtns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:14px 0}
+  .btn95.big{font-size:16px;padding:10px 16px}
+  .btn95[hidden]{display:none}
+  .divider{margin:0;text-align:center;background:var(--navy);border:4px ridge #fff;padding:16px 10px 14px;color:#fff;box-shadow:8px 8px 0 #000;font:15px Verdana,sans-serif}
+  .divider b{display:block;font:clamp(28px,6.4vw,50px) Impact,"Arial Black",sans-serif;color:var(--y);letter-spacing:2px;font-weight:normal;margin-bottom:4px}
+  .serious{background:#fff;border:4px ridge var(--gray);box-shadow:8px 8px 0 #000;margin:30px 0 26px;padding:22px 22px 26px;font-family:Verdana,Geneva,sans-serif;color:#111}
+  .serious h2{font:bold clamp(24px,4.6vw,34px) Verdana,Geneva,sans-serif;color:var(--navy);margin:0 0 10px}
+  .serious .lead{font-size:16px;line-height:1.55;margin:0 0 18px}
+  .serious h3.sh{font:bold 22px Verdana,Geneva,sans-serif;color:var(--navy);margin:30px 0 10px;padding-bottom:4px;border-bottom:3px double var(--navy)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .card{border:2px solid var(--navy);background:#f4f4ff;padding:12px 14px}
+  .card h3{margin:0 0 6px;font:bold 16px Verdana,sans-serif;color:var(--navy)}
+  .card p{margin:0;font-size:14px;line-height:1.5}
+  .recog{margin:0;padding-left:20px;font-size:15px;line-height:1.55}
+  .recog li{margin:8px 0}
+  .serious .tariff h3{font:bold 22px Verdana,sans-serif}
+  .serious .tariff .badge{font-size:12px}
+  .serious table.stats td.big{font-family:Impact,sans-serif}
+  .serious .gb .a{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}
+  @media (max-width:520px){.serious{padding:14px 12px 18px;box-shadow:5px 5px 0 #000}.recbtns .btn95.big{width:100%;text-align:center}}
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -181,72 +207,111 @@ ym(114349333,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",
 <body>
 
 <div class="topbar">
-  <marquee scrollamount="6">★ ДОБРО ПОЖАЛОВАТЬ НА ОФИЦИАЛЬНУЮ СТРАНИЦУ ПРОГРАММЫ «ГЛЕБАНКРОТСТВО» ★ КОПАЕМ ГЛУБОКО С 2007 ГОДА ★ ЛУЧШЕ ЗВОНИТЕ ГЛЕБУ! ★ 8-951-682-36-80 ★ ОСТОРОЖНО: САЙТ ОПТИМИЗИРОВАН ПОД INTERNET EXPLORER 4.0 И РАЗРЕШЕНИЕ 800×600 ★</marquee>
+  <marquee scrollamount="6">★ ДОБРО ПОЖАЛОВАТЬ НА ОФИЦИАЛЬНУЮ СТРАНИЦУ ПРОГРАММЫ «ГЛЕБАНКРОТСТВО» ★ КОПАЕМ ГЛУБОКО С 2007 ГОДА ★ РЕКОМЕНДУЙТЕ ГЛЕБА КОНКУРЕНТУ! ★ ОСТОРОЖНО: САЙТ ОПТИМИЗИРОВАН ПОД INTERNET EXPLORER 4.0 И РАЗРЕШЕНИЕ 800×600 ★</marquee>
 </div>
 <div class="construction"></div>
 
 <div class="wrap">
 
-  <!-- HERO -->
+  <!-- ACT 1: JOKE -->
   <header class="hero">
     <div class="hero-text">
     <h1>ГЛЕБАН<span class="krot">КРОТ</span>СТВО</h1>
     <div class="sub">Копаем глубоко. Под ваших конкурентов. 🦫⛏️</div>
-    <a class="callnow" href="tel:+79516823680">☎ 8-951-682-36-80<small>звоните прямо сейчас! операторы — это тоже Глеб</small></a>
+    <div class="sub">Нанимать меня опасно.<br><b>Рекомендовать конкуренту — выгодно.</b></div>
+    <a class="callnow rec" href="#rekomenduy">📣 Рекомендовать Глеба<small>конкуренту, другу-директору или HR. мы никому не скажем</small></a>
     </div>
     <figure>
       <img class="photo" src="img/gleb-hero.jpg" width="760" height="1018" alt="Глеб в гарнитуре с кружкой «Лучше звоните Глебу!» в кабинете, заваленном папками">
-      <figcaption class="photo-cap">Глеб.jpg: на фото кружка, гарнитура и полная готовность к звонку</figcaption>
+      <figcaption class="photo-cap">Глеб.jpg: на фото кружка, гарнитура и полная готовность стать чьей-то рекомендацией</figcaption>
     </figure>
   </header>
 
-  <!-- PAINS -->
+  <!-- KNOWN COMPETITOR -->
   <section class="panel" id="boli">
-    <h2>У вас тоже <span class="shake">ЭТО?</span></h2>
-    <p>Если хоть одно окно ниже вам знакомо — у вашего бизнеса <b>критическая ошибка</b>. Перезагрузка не поможет.</p>
+    <h2>У вас тоже есть <span class="shake">ТАКОЙ КОНКУРЕНТ?</span></h2>
+    <p>Если хоть одно окно ниже вам знакомо, самое время вспомнить, что у вас есть знакомый Глеб.</p>
     <div class="dialogs">
       <div class="win">
         <div class="tb">Рынок.exe <span class="x">×</span></div>
         <div class="bd"><div class="ico">⛔</div><div><p><b>Конкурент отжимает долю рынка.</b></p><p>Вы демпингуете, он демпингует сильнее. Все в минусе, но он почему-то ещё жив.</p></div></div>
-        <div class="btns"><span class="btn95">Терпеть</span><a class="btn95 def" href="#programma">Звонить Глебу</a></div>
+        <div class="btns"><span class="btn95">Терпеть</span><a class="btn95 def" href="#rekomenduy">Рекомендовать Глеба</a></div>
       </div>
       <div class="win">
-        <div class="tb">Отдел_продаж.doc <span class="x">×</span></div>
-        <div class="bd"><div class="ico">⚠️</div><div><p><b>Продажи держатся на двух звёздах.</b></p><p>Уйдёт один — уйдёт пол-выручки. Регламентов нет, онбординга нет, план «как пойдёт».</p></div></div>
-        <div class="btns"><span class="btn95">Молиться</span><a class="btn95 def" href="#programma">Звонить Глебу</a></div>
+        <div class="tb">Филиалы.xls <span class="x">×</span></div>
+        <div class="bd"><div class="ico">🏢</div><div><p><b>Конкурент открыл третий филиал.</b></p><p>Вы третий год «планируете» второй. На совещании это называется стратегией.</p></div></div>
+        <div class="btns"><span class="btn95">Планировать</span><a class="btn95 def" href="#rekomenduy">Рекомендовать Глеба</a></div>
       </div>
       <div class="win">
-        <div class="tb">Bitrix24 — кладбище <span class="x">×</span></div>
-        <div class="bd"><div class="ico">💀</div><div><p><b>CRM есть. Пользы нет.</b></p><p>Сделки висят месяцами, роботы спят, руководитель смотрит отчёты в Excel.</p></div></div>
-        <div class="btns"><span class="btn95">Ещё полгода</span><a class="btn95 def" href="#programma">Звонить Глебу</a></div>
+        <div class="tb">Тендер_выигран.pdf <span class="x">×</span></div>
+        <div class="bd"><div class="ico">🏆</div><div><p><b>Конкурент выиграл тендер.</b></p><p>Тот самый, на который вы тоже подались. Опять.</p></div></div>
+        <div class="btns"><span class="btn95">Обжаловать</span><a class="btn95 def" href="#rekomenduy">Рекомендовать Глеба</a></div>
       </div>
       <div class="win">
-        <div class="tb">AI_стратегия_2026.ppt <span class="x">×</span></div>
-        <div class="bd"><div class="ico">🤖</div><div><p><b>«Внедряем ИИ» уже год.</b></p><p>Есть презентация и подписка на ChatGPT. Нет ни одного агента в проде и ни рубля эффекта.</p></div></div>
-        <div class="btns"><span class="btn95">Ещё пилот</span><a class="btn95 def" href="#programma">Звонить Глебу</a></div>
+        <div class="tb">Отзывы.txt <span class="x">×</span></div>
+        <div class="bd"><div class="ico">⭐</div><div><p><b>У конкурента отличные отзывы.</b></p><p>У Глеба будут ещё лучше. Особенно если их напишете вы.</p></div></div>
+        <div class="btns"><span class="btn95">Завидовать</span><a class="btn95 def" href="#rekomenduy">Рекомендовать Глеба</a></div>
       </div>
     </div>
   </section>
 
-  <!-- PROGRAM -->
+  <!-- HOW IT WORKS -->
   <section class="panel yellow" id="programma">
     <h2>★ Программа «ГлебанКРОТство» ★</h2>
     <p style="font-size:18px"><b>Последние 2 компании, где я был C-level 4+ года, — БАНКРОТЫ.</b><br>
     <span class="rainbow" style="font-size:24px;font-weight:bold">Совпадение? Не думаю!</span></p>
-    <p>Поэтому у меня для вас уникальное предложение, аналогов которому нет ни на hh.ru, ни на Авито:</p>
+    <p>Поэтому у меня для вас уникальное предложение, аналогов которому нет ни на hh.ru, ни на Авито. Вам даже не придётся меня нанимать:</p>
     <ol class="steps">
-      <li><b>Вы нанимаете Глеба.</b> Глеб пересобирает вам продажи, CRM и AI-автоматизацию. Выручка растёт (в прошлый раз — в 4 раза).</li>
-      <li><b>Вы захватываете рынок.</b> Конкуренты нервно курят ваш кейс на vc.ru.</li>
-      <li><b>Когда рынок кончится —</b> вы рекомендуете Глеба главному конкуренту. С горячими отзывами. 😏</li>
+      <li><b>Вы находите конкурента,</b> который слишком хорошо себя чувствует.</li>
+      <li><b>Вы рекомендуете ему Глеба.</b> Тепло, с эмоциями и горячими отзывами. 😏 Кнопка чуть ниже.</li>
       <li><b>Конкурент нанимает Глеба.</b> Дальше вы знаете. 🦫⛏️</li>
-      <li><b>Повторить.</b> Кусок за кусочком. Рынок — ваш.</li>
+      <li><b>Рынок — ваш.</b> Благодарности принимаются в виде штанов (справа).</li>
+      <li><b>Повторить.</b> Кусок за кусочком.</li>
     </ol>
-    <p class="small" style="margin-top:12px">* Механизм «шага 4» наукой не изучен. Юридически это совпадение. Морально — тоже.</p>
+    <p class="small" style="margin-top:12px">* Механизм «шага 3» наукой не изучен. Юридически это совпадение. Морально — тоже.</p>
   </section>
 
-  <!-- PROOF -->
-  <section class="panel" id="cifry">
-    <h2>Цифры, а не «я командный игрок»</h2>
+  <!-- RECOMMEND CTA -->
+  <section class="panel black" id="rekomenduy">
+    <h2>C:\&gt; РЕКОМЕНДОВАТЬ_ГЛЕБА.EXE</h2>
+    <p>Одна кнопка, и резюме Глеба уходит тому, кого вы выбрали, с припиской «рекомендую». Получатель сам решит, нанимать ли. Что будет дальше, это совпадение.</p>
+    <div class="recmsg" id="recmsg">Рекомендую Глеба Керейтова: Senior Sales Ops / GTM Engineer / AI &amp; CRM Architect. Растит выручку (×4 в EdTech), внедряет AI-агентов в прод, наводит порядок в CRM и собирает отделы продаж. Резюме (PDF): https://глебанкротство.рф/kereytov-cv.pdf</div>
+    <div class="recbtns">
+      <a class="btn95 big def" data-goal="recommend_tg" href="https://t.me/share/url?url=https%3A%2F%2F%D0%B3%D0%BB%D0%B5%D0%B1%D0%B0%D0%BD%D0%BA%D1%80%D0%BE%D1%82%D1%81%D1%82%D0%B2%D0%BE.%D1%80%D1%84%2F&amp;text=%D0%A0%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D1%83%D1%8E%20%D0%93%D0%BB%D0%B5%D0%B1%D0%B0%20%D0%9A%D0%B5%D1%80%D0%B5%D0%B9%D1%82%D0%BE%D0%B2%D0%B0%3A%20Senior%20Sales%20Ops%20%2F%20GTM%20Engineer%20%2F%20AI%20%26%20CRM%20Architect.%20%D0%A0%D0%B0%D1%81%D1%82%D0%B8%D1%82%20%D0%B2%D1%8B%D1%80%D1%83%D1%87%D0%BA%D1%83%20%28%C3%974%20%D0%B2%20EdTech%29%2C%20%D0%B2%D0%BD%D0%B5%D0%B4%D1%80%D1%8F%D0%B5%D1%82%20AI-%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D0%BE%D0%B2%20%D0%B2%20%D0%BF%D1%80%D0%BE%D0%B4%2C%20%D0%BD%D0%B0%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%20%D0%BF%D0%BE%D1%80%D1%8F%D0%B4%D0%BE%D0%BA%20%D0%B2%20CRM%20%D0%B8%20%D1%81%D0%BE%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D1%82%20%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D1%8B%20%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6.%20%D0%A0%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5%20%28PDF%29%3A%20https%3A%2F%2F%D0%B3%D0%BB%D0%B5%D0%B1%D0%B0%D0%BD%D0%BA%D1%80%D0%BE%D1%82%D1%81%D1%82%D0%B2%D0%BE.%D1%80%D1%84%2Fkereytov-cv.pdf" target="_blank" rel="noopener">✈ Рекомендовать в Telegram</a>
+      <a class="btn95 big" data-goal="recommend_mail" href="mailto:?subject=%D0%A0%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D1%83%D1%8E%3A%20%D0%93%D0%BB%D0%B5%D0%B1%20%D0%9A%D0%B5%D1%80%D0%B5%D0%B9%D1%82%D0%BE%D0%B2%20%28Sales%20Ops%20%2F%20GTM%20Engineer%29&amp;body=%D0%A0%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D1%83%D1%8E%20%D0%93%D0%BB%D0%B5%D0%B1%D0%B0%20%D0%9A%D0%B5%D1%80%D0%B5%D0%B9%D1%82%D0%BE%D0%B2%D0%B0%3A%20Senior%20Sales%20Ops%20%2F%20GTM%20Engineer%20%2F%20AI%20%26%20CRM%20Architect.%20%D0%A0%D0%B0%D1%81%D1%82%D0%B8%D1%82%20%D0%B2%D1%8B%D1%80%D1%83%D1%87%D0%BA%D1%83%20%28%C3%974%20%D0%B2%20EdTech%29%2C%20%D0%B2%D0%BD%D0%B5%D0%B4%D1%80%D1%8F%D0%B5%D1%82%20AI-%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D0%BE%D0%B2%20%D0%B2%20%D0%BF%D1%80%D0%BE%D0%B4%2C%20%D0%BD%D0%B0%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%20%D0%BF%D0%BE%D1%80%D1%8F%D0%B4%D0%BE%D0%BA%20%D0%B2%20CRM%20%D0%B8%20%D1%81%D0%BE%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D1%82%20%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D1%8B%20%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6.%20%D0%A0%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5%20%28PDF%29%3A%20https%3A%2F%2F%D0%B3%D0%BB%D0%B5%D0%B1%D0%B0%D0%BD%D0%BA%D1%80%D0%BE%D1%82%D1%81%D1%82%D0%B2%D0%BE.%D1%80%D1%84%2Fkereytov-cv.pdf%0A%0A%D0%A1%D0%B0%D0%B9%D1%82%3A%20https%3A%2F%2F%D0%B3%D0%BB%D0%B5%D0%B1%D0%B0%D0%BD%D0%BA%D1%80%D0%BE%D1%82%D1%81%D1%82%D0%B2%D0%BE.%D1%80%D1%84%2F%0A%0A%D0%A1%20%D1%83%D0%B2%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC%2C%20%D0%B2%D0%B0%D1%88%20%D0%B4%D0%BE%D0%B1%D1%80%D0%BE%D0%B6%D0%B5%D0%BB%D0%B0%D1%82%D0%B5%D0%BB%D1%8C.">✉ Рекомендовать по почте</a>
+      <button class="btn95 big" type="button" id="reccopy">📋 Скопировать текст</button>
+      <button class="btn95 big" type="button" id="recshare" hidden>📲 Поделиться…</button>
+    </div>
+    <p class="small">Мы ничего не отправляем сами: кнопки открывают ваш Telegram или почту с готовым текстом. Кому отправлять, решаете вы.</p>
+  </section>
+
+  <!-- ACT 2: SERIOUS -->
+  <div class="construction"></div>
+  <div class="divider"><b>★ А ТЕПЕРЬ СЕРЬЁЗНО ★</b><span>Шутки кончились. Дальше про то, что вы получите, если наймёте Глеба.</span></div>
+  <div class="construction"></div>
+
+  <div class="serious" id="serious">
+    <h2>Что вы получаете, если нанимаете Глеба</h2>
+    <p class="lead"><b>Глеб Керейтов</b> — Senior Sales Operations Manager · GTM Engineer · AI &amp; CRM Architect. Санкт-Петербург, удалённо или гибрид.<br>
+    Нахожу, где компания теряет деньги в продажах, и превращаю это в процесс, который работает без героизма: с CRM, автоматизацией и AI-агентами, а главное, с измеримым результатом.</p>
+
+    <div class="cards">
+      <div class="card"><h3>AI-агенты в продакшене</h3><p>ИИ-агент на внутренних методичках и 20-летней истории ТКП: скоринг заявок <b>с 4 дней до 2 минут</b>. Продукт включён в реестр российского ПО.</p></div>
+      <div class="card"><h3>Автоматизация продаж и аутрича</h3><p>Конвейеры на n8n + Claude: сбор и фильтрация лидов, AI-квалификация, персонализированные касания. Clay и Apify для данных, HeyReach для кампаний, системный A/B-тест сегментов и офферов.</p></div>
+      <div class="card"><h3>CRM, которая работает</h3><p>Битрикс24 руками: архитектура данных, воронки, смарт-процессы, роботы, база знаний, план/факт по проектам. Без зоопарка систем.</p></div>
+      <div class="card"><h3>Отдел продаж, который растёт</h3><p>Выручка <b>×4</b>, ученики <b>×5</b>, отдел с 5 до ~20 человек. Трёхзвенка «хантеры → клозеры → сервис», регламенты, онбординг, мотивация.</p></div>
+      <div class="card"><h3>Цифры вместо ощущений</h3><p>Юнит-экономика, когортный анализ, CJM, контроль ROI. Умею защитить решение перед собственником.</p></div>
+      <div class="card"><h3>Интеграции под ключ</h3><p>IP-телефония, мессенджеры, СБИС (тендеры), ЭДО. Цикл «инициатива → оценка эффекта → прототип → обучение и метрики».</p></div>
+    </div>
+
+    <h3 class="sh">Узнаёте себя?</h3>
+    <ul class="recog">
+      <li><b>Продажи держатся на двух звёздах.</b> Регламентов и онбординга нет. → Собираю процесс, роли и план/факт, чтобы выручка не зависела от одного человека.</li>
+      <li><b>CRM есть, пользы нет.</b> Сделки висят, отчёты в Excel. → Пересобираю воронки, роботы и отчётность, чтобы CRM показывала деньги.</li>
+      <li><b>«Внедряем ИИ» уже год.</b> Презентация есть, агента в проде нет. → Строю агента под конкретный процесс и считаю эффект.</li>
+    </ul>
+
+    <h3 class="sh">Цифры</h3>
     <table class="stats">
       <tr><th colspan="2">ПРОТОКОЛ РАСКОПОК (подтверждается резюме)</th></tr>
       <tr><td class="big">×4</td><td><b>Выручка компании</b> за время руководства продажами в EdTech. Учеников — ×5.</td></tr>
@@ -255,27 +320,22 @@ ym(114349333,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",
       <tr><td class="big">20+</td><td><b>Лет в продажах</b>: B2B, B2C, корпоративные клиенты, EdTech, наукоёмкое производство, банк.</td></tr>
       <tr><td class="big">0</td><td><b>Лишних систем</b>: план/факт по проектам — прямо в Битрикс24, без зоопарка.</td></tr>
     </table>
-  </section>
 
-  <hr class="rainbowline">
-
-  <!-- TARIFFS -->
-  <section class="panel" id="tarify">
-    <h2>Тарифы <span class="spin">💿</span></h2>
+    <h3 class="sh">Как со мной работать</h3>
     <div class="tariffs">
       <div class="tariff">
-        <h3>🦫 Крот-разведчик</h3>
-        <div class="price">проект / консалтинг</div>
+        <h3>Проект / консалтинг</h3>
+        <div class="price">под вашу задачу</div>
         <ul>
           <li>Аудит отдела продаж и CRM</li>
           <li>Карта потерь денег по воронке</li>
           <li>План внедрения с расчётом ROI</li>
         </ul>
-        <a class="btn95" href="tel:+79516823680">Заказать разведку</a>
+        <a class="btn95" href="mailto:glebotan@gmail.com?subject=%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%20%D0%B8%D0%BB%D0%B8%20%D0%BA%D0%BE%D0%BD%D1%81%D0%B0%D0%BB%D1%82%D0%B8%D0%BD%D0%B3">Обсудить проект</a>
       </div>
       <div class="tariff hot">
-        <div class="badge blink">ХИТ!</div>
-        <h3>⛏️ Крот-резидент</h3>
+        <div class="badge">Открыт к предложениям</div>
+        <h3>В штат</h3>
         <div class="price">full-time · СПб / удалённо / гибрид</div>
         <ul>
           <li>Senior Sales Ops / Head of Sales Ops</li>
@@ -283,27 +343,12 @@ ym(114349333,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",
           <li>Директор по развитию / продажам</li>
           <li>Битрикс24: архитектура руками</li>
         </ul>
-        <a class="btn95 def" href="tel:+79516823680">Нанять крота</a>
-      </div>
-      <div class="tariff">
-        <h3>🕶️ Крот в тылу врага</h3>
-        <div class="price">цена по запросу. конфиденциально</div>
-        <ul>
-          <li>Вы рекомендуете меня конкуренту</li>
-          <li>Я честно делаю там свою работу</li>
-          <li>Дальше — «совпадение»</li>
-        </ul>
-        <a class="btn95" href="mailto:glebotan@gmail.com?subject=%D0%9A%D1%80%D0%BE%D1%82%20%D0%B2%20%D1%82%D1%8B%D0%BB%D1%83%20%D0%B2%D1%80%D0%B0%D0%B3%D0%B0">Шёпотом на почту</a>
+        <a class="btn95 def" href="tel:+79516823680">Позвонить Глебу</a>
       </div>
     </div>
-  </section>
 
-  <!-- SERIOUS CV -->
-  <section class="panel cv" id="cv">
-    <h2>А если серьёзно: кого вы нанимаете</h2>
-    <p style="font-family:Verdana,sans-serif;font-size:15px;line-height:1.5"><b>Глеб Керейтов</b> — Senior Sales Operations Manager · GTM Engineer · AI &amp; CRM Architect. Санкт-Петербург, удалённо или гибрид.<br>
-    Соединяю уровень директора по развитию (стратегия, юнит-экономика, защита ROI перед собственником) с hands-on сборкой пайплайнов — и довожу до измеримых денег.</p>
-
+    <h3 class="sh">Опыт</h3>
+    <div class="cv">
     <div class="buttons88">
       <div class="b88" style="background:#ea4b71">n8n<br>powered</div>
       <div class="b88" style="background:#d97757">Claude<br>Code</div>
@@ -347,21 +392,18 @@ ym(114349333,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",
       <li>Корпоративные B2B-продажи и крупные клиенты; плюс инженерия руками — ГЛОНАСС, видеорегистрация, системы оплаты проезда.</li>
       <li>Образование: Яндекс Практикум × НИУ ВШЭ «Финансовый менеджер» (2023), колледж «Логист» (2025), СПбГУ.</li>
     </ul>
-    <p style="text-align:center;margin-top:16px"><a class="btn95 def" href="kereytov-cv.pdf" download>📄 Скачать резюме (PDF, 200 КБ — грузится за 30 сек на модеме 56k)</a></p>
-  </section>
 
-  <!-- FAQ / guestbook -->
-  <section class="panel" id="faq">
-    <h2>📖 Гостевая книга (а на самом деле возражения)</h2>
-    <div class="gb"><div class="q">Вопрос от <em>HR_Marina_1998</em>: Так это вы их обанкротили?!</div>
-      <div class="a">Нет. Компании закрываются из-за рынка, собственников и макроэкономики. Я в это время растил выручку, строил отделы и запускал AI в прод — это в цифрах выше. А шутку про крота я придумал сам, потому что самоирония — тоже навык.</div></div>
-    <div class="gb"><div class="q">Вопрос от <em>CEO_ne_spit</em>: А вы вообще серьёзно ищете работу?</div>
-      <div class="a">Абсолютно. Ищу роль Senior Sales Ops / Head of Sales Ops / GTM Engineer / директора по развитию или продажам. Сайт смешной — опыт нет.</div></div>
-    <div class="gb"><div class="q">Вопрос от <em>Sobstvennik_777</em>: Зачем мне C-level, который сам пишет пайплайны?</div>
-      <div class="a">Затем, что между «давайте внедрим AI» и «агент сэкономил 4 дня на каждой заявке» обычно стоят три подрядчика и полгода. У меня — одна голова, n8n и Claude.</div></div>
-    <div class="gb"><div class="q">Вопрос от <em>Konkurent_X</em>: А если вас наймём МЫ?</div>
-      <div class="a">Добро пожаловать в программу. Звоните — обсудим, кто из нас кому конкурент. 🦫</div></div>
-  </section>
+      <p style="text-align:center;margin-top:16px"><a class="btn95 def" href="kereytov-cv.pdf" download>📄 Скачать резюме (PDF)</a></p>
+    </div>
+
+    <h3 class="sh">Частые вопросы</h3>
+    <div class="gb"><div class="q">Так это вы их обанкротили?!</div>
+      <div class="a">Нет. Компании закрываются из-за рынка, собственников и макроэкономики. Я в это время растил выручку, строил отделы и запускал AI в прод. Это в цифрах выше. А шутку про крота я придумал сам, потому что самоирония тоже навык.</div></div>
+    <div class="gb"><div class="q">А вы вообще серьёзно ищете работу?</div>
+      <div class="a">Абсолютно. Ищу роль Senior Sales Ops / Head of Sales Ops / GTM Engineer / директора по развитию или продажам. Сайт смешной, опыт нет.</div></div>
+    <div class="gb"><div class="q">Зачем мне C-level, который сам пишет пайплайны?</div>
+      <div class="a">Затем, что между «давайте внедрим AI» и «агент сэкономил 4 дня на каждой заявке» обычно стоят три подрядчика и полгода. У меня одна голова, n8n и Claude.</div></div>
+  </div>
 
   <!-- FINAL CTA -->
   <section class="panel final" id="call">
@@ -369,7 +411,7 @@ ym(114349333,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",
     <div class="callrow">
       <img class="callphoto" src="img/gleb-call.jpg" width="640" height="853" loading="lazy" alt="Глеб разговаривает по телефону">
       <div class="calltext">
-        <p style="font-size:20px">Хотите захватить рынок иначе? <span class="blink">Не ждите, пока конкурент позвонит первым.</span></p>
+        <p style="font-size:20px">Нужна автоматизация, которая окупается? <span class="blink">Позвоните или напишите.</span></p>
         <a class="phone" href="tel:+79516823680">8-951-682-36-80</a><br>
         <a class="mail" href="mailto:glebotan@gmail.com">✉ glebotan@gmail.com</a>
         <p class="small" style="margin-top:14px">Санкт-Петербург · удалённо / гибрид · отвечаю быстрее, чем грузится эта страница</p>
@@ -413,14 +455,14 @@ ym(114349333,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",
   <div>Вы посетитель №</div>
   <div class="counter" id="counter"></div>
   <div><span class="blink">🚧</span> Сайт находится в стадии разработки с 1997 года <span class="blink">🚧</span></div>
-  <div class="webring">◄ <a href="#boli">пред.</a> | Веб-кольцо «Кроты Рунета» | <a href="#call">след.</a> ►</div>
+  <div class="webring">◄ <a href="#rekomenduy">пред.</a> | Веб-кольцо «Кроты Рунета» | <a href="#call">след.</a> ►</div>
   <p class="small">Лучше всего смотреть в Netscape Navigator 3.0 · 800×600 · 256 цветов<br>
   Сделано в Блокноте. Все банкротства — правда, причинно-следственная связь — нет. Сайт — самоирония.<br>
   © 1997–2026 ГлебанКРОТство</p>
   <p class="small">Сайт использует Яндекс Метрику (cookie) для статистики посещений.</p>
 </footer>
 
-<a class="sticky-call" href="tel:+79516823680">☎ Звонить Глебу</a>
+<a class="sticky-call" id="sticky" href="#rekomenduy">📣 Рекомендовать Глеба</a>
 
 <script>
 // visitor counter (fake, the 90s way)
@@ -445,7 +487,7 @@ ym(114349333,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",
 })();
 // alert on first "Терпеть"-type buttons
 document.querySelectorAll('.win .btn95:not(.def)').forEach(function(b){
-  b.addEventListener('click', function(){ alert('Ошибка 404: терпение не найдено.\n\nЛучше звоните Глебу: 8-951-682-36-80'); });
+  b.addEventListener('click', function(){ alert('Ошибка 404: терпение не найдено.\n\nЛучше порекомендуйте Глеба этому конкуренту.'); });
 });
 // promo popups on small screens: every 10s, alternating, 2 times each; pants once more at page end
 (function(){
@@ -478,11 +520,43 @@ document.querySelectorAll('.win .btn95:not(.def)').forEach(function(b){
     }
   },{passive:true});
 })();
+
+// sticky button: recommend in the joke part, call in the serious part
+(function(){
+  var st=document.getElementById('sticky'), ser=document.getElementById('serious');
+  if(!st||!ser||!('IntersectionObserver' in window)) return;
+  var serious=false;
+  function set(on){
+    if(on===serious) return; serious=on;
+    if(on){ st.textContent='☎ Звонить Глебу'; st.setAttribute('href','tel:+79516823680'); }
+    else { st.textContent='📣 Рекомендовать Глеба'; st.setAttribute('href','#rekomenduy'); }
+  }
+  new IntersectionObserver(function(en){ en.forEach(function(e){
+    if(e.isIntersecting) set(true); else set(e.boundingClientRect.top>0 ? false : true);
+  }); },{threshold:0}).observe(ser);
+})();
+// recommend: copy text + native share
+(function(){
+  var box=document.getElementById('recmsg'), cp=document.getElementById('reccopy'), sh=document.getElementById('recshare');
+  if(!box) return;
+  var txt=box.textContent;
+  function goal(n){ try{ ym(114349333,'reachGoal',n); }catch(e){} }
+  if(cp) cp.addEventListener('click',function(){
+    function ok(){ cp.textContent='✅ Скопировано'; setTimeout(function(){ cp.textContent='📋 Скопировать текст'; },2000); goal('recommend_copy'); }
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(ok,function(){}); }
+    else { var r=document.createRange(); r.selectNodeContents(box); var sel=getSelection(); sel.removeAllRanges(); sel.addRange(r); try{ document.execCommand('copy'); ok(); }catch(e){} }
+  });
+  if(sh&&navigator.share){
+    sh.hidden=false;
+    sh.addEventListener('click',function(){ navigator.share({title:'Рекомендую Глеба Керейтова',text:txt,url:location.origin+'/'}).then(function(){ goal('recommend_share'); },function(){}); });
+  }
+})();
 // Yandex.Metrika goals
 (function(){
   function goal(n){ try{ ym(114349333,'reachGoal',n); }catch(e){} }
   document.addEventListener('click',function(e){
     var a=e.target.closest&&e.target.closest('a'); if(!a) return;
+    var dg=a.getAttribute('data-goal'); if(dg){ goal(dg); return; }
     var h=a.getAttribute('href')||'';
     if(h.indexOf('t.me/glalker')>-1) goal('tg_diagnoz');
     else if(h.indexOf('t.tb.ru')>-1) goal('pants_click');

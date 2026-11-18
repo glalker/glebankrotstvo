@@ -134,6 +134,25 @@
   .sticky-call{position:fixed;right:10px;bottom:10px;z-index:50;background:var(--y);border:3px outset #fff36b;padding:8px 12px;
     font:bold 16px Impact,sans-serif;color:var(--r);text-decoration:none;box-shadow:3px 3px 0 #000}
   @media (prefers-reduced-motion:reduce){.blink,.rainbow,.shake,.spin{animation:none}}
+
+  /* promo windows: side rails on wide screens, timed popups on small screens */
+  .promo{display:none}
+  .promo.show{display:block;position:fixed;left:10px;right:10px;bottom:64px;max-width:420px;margin:0 auto;z-index:9000;animation:pop .2s ease-out}
+  @keyframes pop{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
+  .promo .win{box-shadow:6px 6px 0 #000}
+  .promo .win .bd{align-items:center}
+  .promo .tb span.x{width:28px;height:24px;line-height:18px;font-size:16px;cursor:pointer}
+  .promo .pnote{margin:0;padding:0 12px 10px;font:11px/1.3 Tahoma,Verdana,sans-serif;color:#222;text-align:center}
+  @media (min-width:1360px){
+    .wrap{max-width:900px}
+    .hero{grid-template-columns:minmax(0,1fr) minmax(0,340px)}
+    .hero h1{font-size:58px}
+    .promo,.promo.show{display:block;position:fixed;top:120px;bottom:auto;margin:0;width:calc((100vw - 900px)/2 - 30px);max-width:250px;animation:none;z-index:40}
+    .promo-left,.promo-left.show{left:14px;right:auto}
+    .promo-right,.promo-right.show{right:14px;left:auto}
+    .promo .win .bd{flex-direction:column;text-align:center}
+    .promo .tb span.x{display:none}
+  }
 </style>
 </head>
 <body>
@@ -254,48 +273,6 @@
     </div>
   </section>
 
-  <!-- DIAGNOSIS -->
-  <section class="panel yellow" id="diagnoz">
-    <h2>🩺 Диагноз вашей компании</h2>
-    <div class="dialogs" style="grid-template-columns:minmax(250px,520px);justify-content:center">
-      <div class="win">
-        <div class="tb">Доктор Глеб — приём без записи <span class="x">×</span></div>
-        <div class="bd">
-          <div class="ico">🦫</div>
-          <div>
-            <p><b>Проверить компанию</b> (свою, начальника или конкурента).</p>
-            <p>Напишите Глебу в Telegram: пришлите ИНН или ссылку на сайт. Получите шуточный диагноз: <b>Индекс ГлебанКРОТства</b>, главную болезнь и рецепт.</p>
-          </div>
-        </div>
-        <div class="btns"><a class="btn95 def" href="https://t.me/glalker" target="_blank" rel="noopener">Проверить компанию → @glalker</a></div>
-      </div>
-    </div>
-    <p class="small" style="margin-top:12px">* Развлекательный сервис. Это шутка, а не финансовая оценка: мы не утверждаем, что какая-либо компания обанкротится.</p>
-  </section>
-
-  <hr class="rainbowline">
-
-  <!-- SUPPORT -->
-  <section class="panel yellow" id="pants">
-    <h2>🩳 Поддержи мои штаны</h2>
-    <div class="dialogs" style="grid-template-columns:minmax(250px,520px);justify-content:center">
-      <div class="win">
-        <div class="tb">Социальная_квота.exe <span class="x">×</span></div>
-        <div class="bd">
-          <div class="ico">🩳</div>
-          <div>
-            <p><b>Поддержи мои штаны, а то я устроюсь в твою компанию!</b></p>
-            <p>Социальная квота: бесплатные банкротства для тех, кому не по карману.</p>
-          </div>
-        </div>
-        <div class="btns"><a class="btn95 def" href="https://t.tb.ru/c2c-qr-choose-bank?requisiteNumber=+79516823680&amp;bankCode=100000000004" target="_blank" rel="noopener">Поддержать штаны</a></div>
-      </div>
-    </div>
-    <p class="small" style="margin-top:12px">* Перевод добровольный, сумма любая. Штаны не гарантируются, но мы стараемся.</p>
-  </section>
-
-  <hr class="rainbowline">
-
   <!-- SERIOUS CV -->
   <section class="panel cv" id="cv">
     <h2>А если серьёзно: кого вы нанимаете</h2>
@@ -372,6 +349,36 @@
 
 </div>
 
+<aside class="promo promo-left" id="diagnoz">
+  <div class="win">
+    <div class="tb">Доктор Глеб <span class="x">×</span></div>
+    <div class="bd">
+      <div class="ico">🩺</div>
+      <div>
+        <p><b>Диагноз вашей компании</b></p>
+        <p>Пришлите Глебу в Telegram ИНН или ссылку на сайт компании (своей, начальника или конкурента). Получите шуточный Индекс ГлебанКРОТства, главную болезнь и рецепт.</p>
+      </div>
+    </div>
+    <div class="btns"><a class="btn95 def" href="https://t.me/glalker" target="_blank" rel="noopener">Проверить компанию</a></div>
+    <p class="pnote">Это шутка, а не финансовая оценка: мы не утверждаем, что какая-либо компания обанкротится.</p>
+  </div>
+</aside>
+
+<aside class="promo promo-right" id="pants">
+  <div class="win">
+    <div class="tb">Социальная_квота.exe <span class="x">×</span></div>
+    <div class="bd">
+      <div class="ico">🩳</div>
+      <div>
+        <p><b>Поддержи мои штаны, а то я устроюсь в твою компанию!</b></p>
+        <p>Социальная квота: бесплатные банкротства для тех, кому не по карману.</p>
+      </div>
+    </div>
+    <div class="btns"><a class="btn95 def" href="https://t.tb.ru/c2c-qr-choose-bank?requisiteNumber=+79516823680&amp;bankCode=100000000004" target="_blank" rel="noopener">Поддержать штаны</a></div>
+    <p class="pnote">Перевод добровольный, сумма любая. Штаны не гарантируются, но мы стараемся.</p>
+  </div>
+</aside>
+
 <footer>
   <div>Вы посетитель №</div>
   <div class="counter" id="counter"></div>
@@ -409,6 +416,30 @@
 document.querySelectorAll('.win .btn95:not(.def)').forEach(function(b){
   b.addEventListener('click', function(){ alert('Ошибка 404: терпение не найдено.\n\nЛучше звоните Глебу: 8-951-682-36-80'); });
 });
+// promo popups on small screens: every 10s, alternating, 3 times each
+(function(){
+  var mq=window.matchMedia('(min-width:1360px)');
+  var pants=document.getElementById('pants'), diag=document.getElementById('diagnoz');
+  if(!pants||!diag) return;
+  var seq=[pants,diag,pants,diag,pants,diag], i=0;
+  function hideAll(){ pants.classList.remove('show'); diag.classList.remove('show'); }
+  [pants,diag].forEach(function(e){
+    var x=e.querySelector('.x');
+    if(x){
+      x.setAttribute('role','button'); x.setAttribute('tabindex','0'); x.setAttribute('aria-label','Закрыть');
+      x.addEventListener('click',function(){ e.classList.remove('show'); });
+      x.addEventListener('keydown',function(ev){ if(ev.key==='Enter'||ev.key===' '){ ev.preventDefault(); e.classList.remove('show'); } });
+    }
+    e.addEventListener('click',function(ev){ if(ev.target.closest('a')) e.classList.remove('show'); });
+  });
+  function next(){
+    if(i>=seq.length) return;
+    if(!mq.matches){ hideAll(); seq[i].classList.add('show'); }
+    i++;
+    setTimeout(next,10000);
+  }
+  setTimeout(next,10000);
+})();
 </script>
 </body>
 </html>

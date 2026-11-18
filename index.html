@@ -154,6 +154,13 @@
     .promo .tb span.x{display:none}
   }
 </style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=114349333','ym');
+ym(114349333,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114349333" style="position:absolute;left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
 
@@ -387,6 +394,7 @@
   <p class="small">Лучше всего смотреть в Netscape Navigator 3.0 · 800×600 · 256 цветов<br>
   Сделано в Блокноте. Все банкротства — правда, причинно-следственная связь — нет. Сайт — самоирония.<br>
   © 1997–2026 ГлебанКРОТство</p>
+  <p class="small">Сайт использует Яндекс Метрику (cookie) для статистики посещений.</p>
 </footer>
 
 <a class="sticky-call" href="tel:+79516823680">☎ Звонить Глебу</a>
@@ -445,6 +453,24 @@ document.querySelectorAll('.win .btn95:not(.def)').forEach(function(b){
     if(window.innerHeight+window.scrollY>=h.scrollHeight-40){
       endShown=true; hideAll(); pants.classList.add('show');
     }
+  },{passive:true});
+})();
+// Yandex.Metrika goals
+(function(){
+  function goal(n){ try{ ym(114349333,'reachGoal',n); }catch(e){} }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a'); if(!a) return;
+    var h=a.getAttribute('href')||'';
+    if(h.indexOf('t.me/glalker')>-1) goal('tg_diagnoz');
+    else if(h.indexOf('t.tb.ru')>-1) goal('pants_click');
+    else if(h.indexOf('tel:')===0) goal('call_click');
+    else if(h.indexOf('mailto:')===0) goal('mail_click');
+    else if(/\.pdf($|\?)/.test(h)) goal('cv_download');
+  },true);
+  var endSent=false;
+  window.addEventListener('scroll',function(){
+    if(endSent) return;
+    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-40){ endSent=true; goal('scroll_end'); }
   },{passive:true});
 })();
 </script>
